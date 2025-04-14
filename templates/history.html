@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluation History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Employee Evaluation History</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Attendance</th>
+                <th>Tasks</th>
+                <th>Teamwork</th>
+                <th>Deadlines</th>
+                <th>Result</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for eval in evaluations %}
+            <tr>
+                <td>{{ eval.employee_name }}</td>
+                <td>{{ eval.attendance }}%</td>
+                <td>{{ eval.tasks }}%</td>
+                <td>{{ eval.teamwork }}</td>
+                <td>{{ eval.deadlines }}%</td>
+                <td>{{ eval.result }}</td>
+                <td>{{ eval.timestamp.strftime("%Y-%m-%d %H:%M") }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Evaluate New</a>
+</body>
+</html>

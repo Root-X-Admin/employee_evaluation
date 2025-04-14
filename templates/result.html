@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluation Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Performance Evaluation Result:</h2>
+    <div class="alert alert-info">
+        <p><strong>Employee:</strong> {{ employee_name }}</p>
+        <p><strong>Evaluation Result:</strong> {{ result }}</p>
+        <hr>
+        <h5>Explanation:</h5>
+        <pre>{{ explanation }}</pre>
+        <hr>
+        <h5>Suggested Improvement:</h5>
+        <p>{{ suggestion }}</p>
+    </div>
+    <a href="/" class="btn btn-secondary">Evaluate Another Employee</a>
+    <a href="/history" class="btn btn-link">View Evaluation History</a>
+</body>
+</html>
